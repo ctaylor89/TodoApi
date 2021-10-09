@@ -1,0 +1,23 @@
+
+Tutorial: Create a web API with ASP.NET Core - Project based on this site
+https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-5.0&tabs=visual-studio
+---------------------------------------------------------------
+Swashbuckle is an open source project for generating Swagger documents for Web APIs that are built with ASP.NET Core.
+Swashbuckle relies heavily on ApiExplorer, the API metadata layer that ships with ASP.NET Core. 
+There are three Swagger core components:
+AspNetCore.SwaggerGen - provides the functionality to generate JSON Swagger documents that describe the objects, methods, return types, etc.
+AspNetCore.SwaggerUI - an embedded version of the Swagger UI tool.
+AspNetCore.Swagger - a Swagger object model and middleware to expose SwaggerDocument objects as JSON endpoints.
+
+---------------------------------------------------------------
+ASP.NET Core web API documentation with Swagger / OpenAPI
+https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-5.0
+---------------------------------------------------------------
+
+---------------------------------------------------------------
+
+---------------------------------------------------------------
+
+---------------------------------------------------------------
+
+---------------------------------------------------------------
