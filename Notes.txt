@@ -10,7 +10,7 @@ AspNetCore.SwaggerUI - an embedded version of the Swagger UI tool.
 AspNetCore.Swagger - a Swagger object model and middleware to expose SwaggerDocument objects as JSON endpoints.
 
 ---------------------------------------------------------------
-ASP.NET Core web API documentation with Swagger / OpenAPI 
+ASP.NET Core web API documentation with Swagger / OpenAPI
 https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-5.0
 ---------------------------------------------------------------
 
