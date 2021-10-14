@@ -2,6 +2,8 @@
 Tutorial: Create a web API with ASP.NET Core - Project based on this site
 https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-5.0&tabs=visual-studio
 ---------------------------------------------------------------
+https://github.com/ctaylor89/TodoApi
+---------------------------------------------------------------
 Swashbuckle is an open source project for generating Swagger documents for Web APIs that are built with ASP.NET Core.
 Swashbuckle relies heavily on ApiExplorer, the API metadata layer that ships with ASP.NET Core. 
 There are three Swagger core components:
@@ -13,11 +15,124 @@ AspNetCore.Swagger - a Swagger object model and middleware to expose SwaggerDocu
 ASP.NET Core web API documentation with Swagger / OpenAPI
 https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-5.0
 ---------------------------------------------------------------
+OpenAPI specification (openapi.json)
+https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-5.0
+The OpenAPI specification is a document that describes the capabilities of your API. The document is based on the XML and attribute 
+annotations within the controllers and models. It's the core part of the OpenAPI flow and is used to drive tooling such as SwaggerUI. 
+By default, it's named openapi.json.
+
+Swagger is tooling that uses the OpenAPI specification. For example, OpenAPIGenerator and SwaggerUI.
+---------------------------------------------------------------
+ If you have worked on one project that used .NET Core version 2.1 and then you installed .NET Core 3.0 Preview, you will 
+ get an SDK error while trying to run your .NET Core 2.1 project. This is because your current SDK version has changed to 3.0.
+ See "Switching Between .NET Core SDK Versions" https://dzone.com/articles/switching-between-net-core-sdk-versions
+ ---
+ A big advantage of .NET Core is that it installs .NET Core SDKs separately, so the new SDK does not affect the previously 
+ installed SDK. You can see all the installed SDKs under "C:\Program Files\dotnet\sdk".
+---------------------------------------------------------------
+How-to setup Basic Authentication filter in an Asp.Net Web API
+https://racineennis.ca/2018/07/02/how-to-basic-authentication-filter-aspnet-web-api
+---------------------------------------------------------------
+.Net SDK overview and other good info for explaining .net versions and other stuff.
+https://docs.microsoft.com/en-us/dotnet/core/sdk
+---------------------------------------------------------------
+ASP.NET Core Application Profile settings are in the launchSettings.json file
+
+In the launchSettings.json file, we have two sections named IIS Express and TodoApi.
+{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:64886",
+      "sslPort": 44398
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "TodoApi": {
+      "commandName": "Project",
+      "dotnetRunMessages": "true",
+      "launchBrowser": true,
+      "launchUrl": "api/todoitemsXX",
+      "applicationUrl": "https://localhost:5001;http://localhost:5000",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
+
+When you run the application from Visual Studio either by pressing CTRL + F5 or just F5 then by default the profile with 
+“commandName”: “IISExpress” is going to be used. However, if you run the ASP.NET Core application using .NET Core CLI 
+(i.e. dotnet run command), then the profile with the “commandName”: “Project” is going to be used.  
+
+---------------------------------------------------------------
+In ASP.NET Core, services such as the DB context must be registered with the dependency injection (DI) container. The container 
+provides the service to controllers.
+---------------------------------------------------------------
+The ASP.NET Core templates for Controllers with views include [action] in the route template.
+The ASP.NET Core templates for API controllers don't include [action] in the route template.
+---------------------------------------------------------------Hi
+return CreatedAtAction(nameof(GetTodoItem), new { id = todoItem.Id }, todoItem);
+Creates a CreatedAtActionResult object that produces a Status201Created response.
+
+Returns an HTTP 201 status code if successful. HTTP 201 is the standard response for an HTTP POST method that creates a new 
+resource on the server.
+
+Adds a Location header to the response. The Location header specifies the URI of the newly created to-do item. For more 
+information, see 10.2.2 201 Created.
+
+References the GetTodoItem action to create the Location header's URI. The C# nameof keyword is used to avoid hard-coding the 
+action name in the CreatedAtAction call.
+---------------------------------------------------------------
+
 
 ---------------------------------------------------------------
 
----------------------------------------------------------------
 
 ---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+
 
 ---------------------------------------------------------------
