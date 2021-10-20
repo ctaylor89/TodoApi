@@ -21,7 +21,7 @@ namespace TodoApi.Controllers
         }
 
         // GET: api/TodoItems
-        [HttpGet]
+        [HttpGet("products")]
         public async Task<ActionResult<IEnumerable<TodoItem>>> GetTodoItems()
         {
             return await _context.TodoItems.ToListAsync();
@@ -99,6 +99,8 @@ namespace TodoApi.Controllers
 
             return NoContent();
         }
+
+
 
         private bool TodoItemExists(long id)
         {
